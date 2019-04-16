@@ -12,7 +12,11 @@
 Array.prototype.myMap = function (callback) {
   const result = [];
   for (let index = 0; index < this.length; index++) {
-    result.push(callback(this[index], index, this))
+    // This is primarily to check if the item
+    // exists in the array, 
+    if (this.indexOf(this[index]) > -1) {
+      result[index] = callback(this[index], index, this)
+    }
   }
 
   return result
@@ -20,6 +24,7 @@ Array.prototype.myMap = function (callback) {
 
 // example
 const numbers = [1, 2, 3, 4]
+numbers[10] = 34;
 
 const double = numbers.myMap((item, index) => {
   return item * 2
