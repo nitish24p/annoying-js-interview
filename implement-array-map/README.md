@@ -25,7 +25,7 @@ Implement the `Array.map` method
  * The callback gets 3 arguments
  * the item, the index and the  execution context
  */
-Array.prototype.myMap = function (callback) {
+Array.prototype.newMap = function (callback) {
   const result = [];
   for (let index = 0; index < this.length; index++) {
     // This is primarily to check if the item
@@ -42,7 +42,7 @@ Array.prototype.myMap = function (callback) {
 const numbers = [1, 2, 3, 4]
 numbers[10] = 34;
 
-const double = numbers.myMap((item, index) => {
+const double = numbers.newMap((item, index) => {
   return item * 2
 })
 

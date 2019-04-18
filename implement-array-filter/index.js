@@ -9,7 +9,7 @@
  * The callback gets 3 arguments
  * the item, the index and the  current array being traversed
  */
-Array.prototype.myFilter = function (callback, context) {
+Array.prototype.newFilter = function (callback, context) {
   const result = [];
   for (let index = 0; index < this.length; index++) {
     if (callback.call(context, this[index], index, this)) {
@@ -22,6 +22,6 @@ Array.prototype.myFilter = function (callback, context) {
 
 // example
 const numbers = [1, 2, 3, 4]
-const even = numbers.myFilter(item => item % 2 === 0)
+const even = numbers.newFilter(item => item % 2 === 0)
 
 console.log(even)
