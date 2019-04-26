@@ -20,3 +20,4 @@ List of Questions people have been asked in JS interviews.
 - Binary Search
 - Implement a ticker component
 - Loader Question
+- Flatten an Array
